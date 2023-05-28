@@ -1,56 +1,983 @@
 <!DOCTYPE html>
+
+<!-- In case if someone actually reads the code...
+Hi, This resume is done very roughly on notepad++, and not finalized LOL
+Please don't judge my ablity from this code, Thank you so much :)
+ -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
+	<style>
+		body{
+		
+			max-width: 1300px;
+			margin: 10px auto;
+			font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+		}
+        .banner {
+			background-image: url("image/banner.png");
+		    background-color: lightblue;
+			background-repeat:no-repeat;
+			height: 160px;
+		}
+		
+        .profile-picture {
+			width: 120px;
+			height: 120px;
+			background-color: white;
+			border-radius: 50%;
+			position: relative;
+			top: -60px;
+			left: 25px;
+			z-index: 1;
+			overflow: hidden;
+        }
+		
+		.profile-picture-me{
+			width: 90%;
+			position: relative;
+			top: -10px;
+			left: 5px;
+		}
+		
+		.profile-name
+		{
+			font-size: xx-large;
+			font-weight: 900;
+			top: -140px;
+			position: relative;
+			left: 180px;
+			color: #6a5656;
+			width: max-content;
+		}
+		
+		.profile-detail
+		{
+			font-size: large;
+			font-weight: 900;
+			top: -130px;
+			position: relative;
+			left: 180px;
+			color: #5d283a;
+			width: max-content;
+		}
+		
+		.profile-skills
+		{
+			font-weight: 900;
+			top: -100px;
+			position: relative;
+			color: #2c3e50;;
+			width: max-content;
+		}
+		
+		.profile-skills-small
+		{
+			display:none;
+		}
+		
+		.skills-label
+		{
+			color: white;
+			background: #6a5656;
+			padding: 10px;
+			border-radius: 7px;
+			width: auto;
+			text-align: center;
+			margin: 6px;
+		}
+		
+		.td-skills
+		{
+			padding-left: 18px;
+		}
+		
+		.sendmail
+		{
+			cursor: pointer;
+		
+		}
+		
+		.sendmail:hover
+		{
+			color:#f68600;
+		
+		}
+		
+		
+		
+        .language-switcher {
+			top: -110px;
+			text-align: right;
+			position: relative;
+        }
+		
+		.detail
+		{
+			top: -100px;
+			position: relative;
+		}
+		
+		.tb-school td
+		{
+			padding: 10px;
+			text-align:center;
+			font-weight:600;
+		}
+		
+		.tr-school
+		{
+			font-size: large;
+			color: white;
+			background-color: #f1bfc0;
+		}
+		
+		.tr-school-content
+		{
+			border-bottom: 1px solid #e9e9e9;
+		}
+		
+		.tr-school-content:hover
+		{
+			background-color:#fff9f0;
+		}
+		
+		.td-school
+		{
+			padding:10px;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		.self-intro
+		{
+			padding: 18px;
+			font-weight:600;
+		}
+		
+        
+		.wrapper {
+		  width: 100%;
+		  margin: 0 auto;
+		}
+		.tabs {
+		  
+		  position: relative;
+		  margin: 3rem 0;
+		  background: #525161;  /*#6a5656;*/
+		  height: 14.75rem;
+		}
+		.tabs::before,
+		.tabs::after {
+		  content: "";
+		  display: table;
+		}
+		.tabs::after {
+		  clear: both;
+		}
+		.tab {
+			width:33.33%;
+		  float: left;
+		}
+		.tab-switch {
+		  display: none;
+		}
+		.tab-label {
+		  position: relative;
+		  display: block;
+		  line-height: 2.75em;
+		  height: 3em;
+		  padding: 0 1.618em;
+		  background: #6a5656;
+		  border-right: 0.125rem solid #d09c9c;
+		  color: #fff;
+		  top: 0;
+		  transition: all 0.25s;
+		  
+    font-weight: bolder;
+    text-align: center;
+		}
+		.tab-label:hover {
+		  top: -0.25rem;
+		  transition: top 0.25s;
+		}
+		.tab-content {
+		  position: absolute;
+		  z-index: 1;
+		  top: 2.75em;
+		  left: 0;
+		  padding: 1.618rem;
+		  background: #fff;
+		  color: #2c3e50;
+		  opacity: 0;
+		  transition: all 0.35s;
+		  width: 100%;
+		  font-weight:larger;
+		}
+		.tab-switch:checked + .tab-label {
+		  background: #fff9f0;
+		  color: #2c3e50;
+		  border-bottom: 0;
+		  border-right: 0.125rem solid #fff;
+		  transition: all 0.35s;
+		  z-index: 1;
+		  top: -0.0625rem;
+		  
+			font-weight: bolder;
+			font-weight:larger;
+			text-align: center;
+			
+		}
+		.tab-switch:checked + label + .tab-content {
+		  z-index: 2;
+		  opacity: 1;
+		  transition: all 0.35s;
+		}
+		
+		
+		.timeline{
+			
+			background-color:#fff;
+			padding:30px 20px;
+			/*box-shadow:0px 0px 10px rgba(0,0,0,.5); */
+		}
+		.timeline ul{
+			list-style-type:none;
+			border-left:2px solid #094a68;
+			padding:10px 5px;
+		}
+		.timeline ul li{
+			padding:20px 20px;
+			position:relative;
+			transition:.5s;
+		}
+		.timeline ul li span{
+			display:inline-block;
+			background-color:#602d42;
+			color:white;
+			border-radius:25px;
+			padding:3px 12px;
+			font-size:larger;
+			text-align:center;
+			font-weight: bold;
+		}
+		.timeline ul li .content h3{
+			color: #602d42;
+			font-size: x-large;
+			padding-top: 25px;
+			font-weight: bolder;
+			padding-bottom: 15px;
+		}
+		.timeline ul li .content h2{
+			color: #f68600;
+			font-size: larger;
+			font-weight: bolder;
+			font-style: italic;
+		}
+		.timeline ul li .content p{
+			font-weight:600;
+		}
+		.timeline ul li:before{
+			position:absolute;
+			content:'';
+			width:10px;
+			height:10px;
+			background-color:#f1bfc0;
+			border-radius:50%;
+			left:-11px;
+			top:28px;
+			transition:.5s;
+		}
+		.timeline ul li:hover{
+			background-color:#fff9f0;
+		}
+		.timeline ul li:hover:before{
+		  background-color:#f68800;
+			box-shadow:0px 0px 10px 2px #f68800;
+		}
+		
+		
+		.language-btn
+			{
+				width: auto;
+			}
+		
+		@media (max-width:300px){
+			.timeline{
+				width:100%;
+			padding:30px 5px 30px 10px;
+			}
+			.timeline ul li .content h3{
+				color:#34ace0;
+				font-size:15px;
+			}
+
+		}
+		
+		@media(max-width:768px)
+		{
+			.language-switcher {
+				
+				top: 250px;
+				text-align: center;
+				position: absolute;
+				display: block;
+				width: 100%;
+				
+			}
+			
+			.language-btn
+			{
+				width: 32%;
+			}
+			
+			.profile-name
+			{
+				font-size: xx-large;
+				font-weight: 900;
+				top: auto;
+				position: relative;
+				margin: 10px auto;
+				color: #6a5656;
+				width: max-content;
+				left:auto;
+			}
+			
+			.profile-detail
+			{
+				font-size: large;
+				font-weight: 900;
+				top: auto;
+				position: relative;
+				left: auto;
+				color: #5d283a;
+				width: max-content;
+				margin: 10px auto;
+			}
+			
+			.profile-skills
+			{
+				display:none;
+			}
+			
+			.profile-skills-small
+			{
+				display: block;
+				font-weight: 900;
+				color: #5d283a;
+				margin: 10px;
+			}
+			
+			.detail
+			{
+				top: auto;
+				position: relative;
+			}
+		}
+		
+		
+		
+		.footer
+		{
+			height:300px;
+		}
+		
+    </style>
+	
+    <script>
+        function showContent(contentId) {
+		//debugger;
+            // Hide all content
+            var contents = document.getElementsByClassName("mylang");
+			for (var i = 0; i < contents.length; i++) {
+                contents[i].hidden =true;
+            }
+            
+            // Show selected content
+			var contentshow = document.getElementsByClassName("mylang" + contentId );
+            for (var i = 0; i < contentshow.length; i++) {
+                contentshow[i].hidden = false;
+            }
+        }
+    </script>
+	
     <title>Resume</title>
 </head>
-<body>
+<body onload="showContent('EN')">
     <header>
-        <!-- Banner and Profile Picture -->
+	    
         <div class="banner">
-            <!-- Add your banner content here -->
         </div>
         <div class="profile-picture">
-            <!-- Add your profile picture here -->
-        </div>
-    </header>
+        	<img class="profile-picture-me" src="image/myuue.jpg">
+		</div>
+		
+	</header>
     
     <main>
         <!-- Language Switcher -->
         <div class="language-switcher">
-            <button class="btn btn-primary">中文</button>
-            <button class="btn btn-primary">English</button>
-            <button class="btn btn-primary">日本語</button>
+			<button class="btn btn-info language-btn" onclick="showContent('JP')">日本語</button>
+			<button class="btn btn-info language-btn" onclick="showContent('EN')">English</button>
+            <button class="btn btn-info language-btn" onclick="showContent('CH')">中文</button>
+        </div>
+		
+		<div class="profile-name">
+            <div class="mylang mylangCH">王海慧</div>
+			<div class="mylang mylangEN">Hai Hui Wang</div>
+			<div class="mylang mylangJP">王海慧</div>
+		</div>
+		<div class="profile-detail">
+			<table>
+			<tr>
+			<td>
+				<div>E-mail</div>
+			</td>
+			<td>
+			
+				<span>　myuue.ou@gmail.com　</span><span class="sendmail glyphicon glyphicon-envelope" onclick="location.href='mailto:myuue.ou@gmail.com';"></span>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="mylang mylangCH">聯絡電話</div>
+				<div class="mylang mylangEN">Phone</div>
+				<div class="mylang mylangJP">電話番号</div>
+			</td>
+			<td>
+				<div>　(+81) 080 4114 2382 (~ 2023/06/21)</div>
+				<div style="color:grey;">　(+886) 0977 039 163 (2023/06/23 ~)</div>
+				
+			</td>
+			</tr>
+			</table>
         </div>
         
         <!-- Skills Section -->
         <section class="skills">
-            <h2>Skills</h2>
-            <!-- Add your skills icons and text here -->
+            <div class="profile-skills">
+			<table width="100%">
+			<tr width="100%">
+			<td width="30%">
+				<div class="skills-label">
+					<div class="mylang mylangCH">證照</div>
+					<div class="mylang mylangEN">Certificate</div>
+					<div class="mylang mylangJP">認定証</div>
+				</div>
+			</td>
+			<td width="70%">
+			
+				<div> ◆ Microsoft MCSA</div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">語言</div>
+					<div class="mylang mylangEN">Language</div>
+					<div class="mylang mylangJP">言語</div>
+				</div>
+			</td>
+			<td>
+				<div class="mylang mylangCH">
+					<div> ◆ 中文 (母語)</div>
+					<div> ◆ 英文 Toeic: 750 (英語系國家生活6年)</div>
+					<div> ◆ 日文 (在日本就讀日本語學校中)</div>
+				</div>
+				<div class="mylang mylangEN">
+					<div> ◆ Chinese (Native)</div>
+					<div> ◆ English Toeic: 750 (Lived in English-speaking country for 6 years)</div>
+					<div> ◆ Japanese (Currently attending a Japanese language school in Japan)</div>
+				</div>
+				<div class="mylang mylangJP">
+					<div> ◆ 中国語 (母語)</div>
+					<div> ◆ 英語 Toeic: 750 (英語國家での生活経験6年)</div>
+					<div> ◆ 日本語 (日本の日本語学校に在籍中)</div>
+				</div>
+				
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">程式設計 & 資料庫</div>
+					<div class="mylang mylangEN">Programming & Database</div>
+					<div class="mylang mylangJP">プログラム設計 & データベース</div>
+				</div>
+			</td>
+			<td>
+				<div> ◆ ASP.NET ◆ C# ◆ MS SQL ◆ Java ◆ Python ◆ Android ◆ </div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">網頁 UI/UX</div>
+					<div class="mylang mylangEN">Web UI/UX</div>
+					<div class="mylang mylangJP">ウェブUI/UX</div>
+				</div>
+			</td>
+			<td>
+				<div> ◆ HTML ◆ JavaScript ◆ CSS ◆ Bootstrap ◆ jQuery </div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">應用軟體</div>
+					<div class="mylang mylangEN">Application Software</div>
+					<div class="mylang mylangJP">ソフトウェア</div>
+				</div>
+			</td>
+			<td>
+				<div> ◆ Paint. Net ◆ Photoshop ◆ Power BI ◆ Power Director </div>
+			</td>
+			</tr>
+			</table>
+        </div>
+		<div class="profile-skills-small">
+			<table style="width: 100%;">
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">證照</div>
+					<div class="mylang mylangEN">Certificate</div>
+					<div class="mylang mylangJP">認定証</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+			
+				<div> ◆ Microsoft MCSA</div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">語言</div>
+					<div class="mylang mylangEN">Language</div>
+					<div class="mylang mylangJP">言語</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+				<div class="mylang mylangCH">
+					<div> ◆ 中文 (母語)</div>
+					<div> ◆ 英文 Toeic: 750 (英語系國家生活6年)</div>
+					<div> ◆ 日文 (在日本就讀日本語學校中)</div>
+				</div>
+				<div class="mylang mylangEN">
+					<div> ◆ Chinese (Native)</div>
+					<div> ◆ English Toeic: 750 (Lived in English-speaking country for 6 years)</div>
+					<div> ◆ Japanese (Currently attending a Japanese language school in Japan)</div>
+				</div>
+				<div class="mylang mylangJP">
+					<div> ◆ 中国語 (母語)</div>
+					<div> ◆ 英語 Toeic: 750 (英語國家での生活経験6年)</div>
+					<div> ◆ 日本語 (日本の日本語学校に在籍中)</div>
+				</div>
+				
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">程式設計 & 資料庫</div>
+					<div class="mylang mylangEN">Programming & Database</div>
+					<div class="mylang mylangJP">プログラム設計 & データベース</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+				<div> ◆ ASP.NET ◆ C# ◆ MS SQL ◆ Java ◆ Python ◆ Android ◆ </div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">網頁 UI/UX</div>
+					<div class="mylang mylangEN">Web UI/UX</div>
+					<div class="mylang mylangJP">ウェブUI/UX</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+				<div> ◆ HTML ◆ JavaScript ◆ CSS ◆ Bootstrap ◆ jQuery </div>
+			</td>
+			</tr>
+			<tr>
+			<td >
+				<div class="skills-label">
+					<div class="mylang mylangCH">應用軟體</div>
+					<div class="mylang mylangEN">Application Software</div>
+					<div class="mylang mylangJP">ソフトウェア</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+				<div> ◆ Paint. Net ◆ Photoshop ◆ Power BI ◆ Power Director </div>
+			</td>
+			</tr>
+			</table>
+        </div>
         </section>
         
         <!-- Timeline Section -->
-        <section class="timeline">
-            <h2>Timeline</h2>
-            <!-- Add your timeline buttons here -->
-            <div class="timeline-content">
-                <!-- Content for each timeline period goes here -->
-            </div>
+        <section class="detail">
+		<div class="wrapper">
+		  <div class="tabs">
+			<div class="tab">
+			  <input type="radio" name="css-tabs" id="tab-1" checked class="tab-switch">
+			  <label for="tab-1" class="tab-label">
+				<div class="mylang mylangCH">工作經歷</div>
+				<div class="mylang mylangEN">Work Experience</div>
+				<div class="mylang mylangJP">職歷</div>
+				</label>
+			  <div class="tab-content">
+				<div class="timeline">
+					<ul>
+						<li>
+							<span>2017/09 ~ 2023/03</span>
+							<div class="content">
+								<div class="mylang mylangCH">
+									<h3>緯創資通</h3>
+									<h2>技術主任 (2021~)</h2>
+									<h2>系統開發工程師</h2>
+									<br>
+									<p>
+										此職位主要負責同處其他部門的數位轉型相關需求。
+										</p>
+										<p>主要專案為 ESG Database ，此專案目的為協助全球各廠區 ESG 相關數據整合而開發。內容包含資料上傳、
+										審核、KPI公式計算、報表展示以及定期發送等功能。</p>
+										<p>次要專案為 CoPQ 1.0，目的為進行公司不良品質成本資料的蒐集與串接，並將數據透過報表呈現。<p>
+										<p>工作內容包含： ◆ 需求訪談 ◆ 需求評估 ◆系統設計 ◆ 資料庫設計 ◆ 資料庫建置 ◆ 系統開發
+										◆ 系統測試 ◆ 資料串接 ◆ UI/UX設計 ◆ 協助主管報告製作等...
+									</p>
+								</div>
+								<div class="mylang mylangEN">
+									<h3>Wistron</h3>
+									<h2>Technical Supervisor (2021~)</h2>
+									<h2>System Develop Engineer</h2>
+									<br>
+									<p>
+										This position mainly covers the digital transformation of other Department requirements under this Division.
+										</p>
+										<p>Major project is ESG Database , which is a system that helps with uploading, reviewing, KPI algorithm calculations, 
+reports and notices on the ESG related data of all Sites.</p>
+										<p>Other projects such as CoPQ 1.0, where detailed report of Cost of Poor Quality can be analyzed.<p>
+										<p>Work focus: ◆ Demand Interview & Analysis ◆ System Design & Develop ◆ Database Design & Build ◆ Testing ◆ Data Concatenation ◆ UI/UX Design
+										◆ Support Manager on report writting
+									</p>
+								</div>
+								<div class="mylang mylangJP">
+									<h3>ウィストロン</h3>
+									<h2>テクニカルリーダー (2021~)</h2>
+									<h2>システム開発エンジニア</h2>
+									<br>
+									<p>
+										このポジションでは、他の部門とのデジタルトランスフォーメーションに関連する要件を調整することが主な役割です。
+										</p>
+										<p>主要なプロジェクトはESGデータベースであり、世界各工場のESG関連データの統合と開発を支援することを目的としています。データのアップロード、審査、KPIの計算、レポートの表示、定期的な送信などの機能が含まれています。</p>
+										<p>副次的なプロジェクトはCoPQ 1.0であり、企業の品質コストデータの収集と統合を行い、データをレポートで表示することを目的としています。<p>
+										<p>業務内容： ◆ 要件インタビュー ◆ 要件評価 ◆システム設計 ◆ データベース設計 ◆ データベースの構築 ◆ システム開発
+										◆ システムテスト ◆ データの統合 ◆ UI/UX設計 ◆ 上司の報告作成の支援などが含まれます...
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>2013/07 ~ 2013/08</span>
+							<div class="content">
+								<div class="mylang mylangCH">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(打工)</font> 日昭電子</h3>
+									<h2>作業員</h2>
+									<br>
+									<p>
+										暑期一個月的打工，內容是依照SOP將零件與電路版組合等。
+										</p>
+								</div>
+								<div class="mylang mylangEN">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(Part-time)</font> Nissho Electronics</h3>
+									<h2>Operator</h2>
+									<br>
+									<p>
+										Part-time during summer vacation, deals with assemble electronic components.
+										</p>
+								</div>
+								<div class="mylang mylangJP">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(アルバイト)</font> 日昭電子</h3>
+									<h2>オペレーター</h2>
+									<br>
+									<p>
+										夏期間の1ヶ月のアルバイトで、SOPに基づいて部品と回路基板を組み立てるなどの作業を行います。
+										</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>2011/02 ~ 2011/08</span>
+							<div class="content">
+								<div class="mylang mylangCH">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(打工)</font> 何嘉仁國際文教團隊</h3>
+									<h2>行政</h2>
+									<br>
+									<p>
+										剛回台灣半年的打工，主要負責櫃台雜務，例如宣傳課程、發DM、開收據、教導學生作業、接送學生、布置等。
+										</p>
+								</div>
+								<div class="mylang mylangEN">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(Part-time)</font> HESS International 
+Education Group</h3>
+									<h2>Administrative</h2>
+									<br>
+									<p>
+										6 months of part-time after coming back to Taiwan, responsible for publicity courses, writing receipts, tutoring, etc.
+										</p>
+								</div>
+								<div class="mylang mylangJP">
+									<h3><font style="font-size: smaller;
+    color: #868686;">(アルバイト)</font> ヘス・インターナショナル教育グループ</h3>
+									<h2>行政職</h2>
+									<br>
+									<p>
+										台湾に戻ってきて半年のアルバイトで、主に受付業務を担当しました。例えば、コースの宣伝、広告宣伝発送、領収書の発行、生徒への課題指導、生徒の送迎、設営などを行いました。
+										</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			  </div>
+			</div>
+			<div class="tab">
+			  <input type="radio" name="css-tabs" id="tab-2" class="tab-switch">
+			  <label for="tab-2" class="tab-label">
+			  <div class="mylang mylangCH">學歷</div>
+				<div class="mylang mylangEN">Academic Background</div>
+				<div class="mylang mylangJP">学歴</div>
+				</label>
+			  <div class="tab-content" >
+			<table width="100%" class="tb-school">
+				<tr class="tr-school">
+					<td class="td-school" width="15%">
+						<div class="academy-label">
+							<div class="mylang mylangCH">日期</div>
+							<div class="mylang mylangEN">Date</div>
+							<div class="mylang mylangJP">日付</div>
+						</div>
+					</td>
+					<td class="td-school" width="30%">
+						<div class="academy-label">
+							<div class="mylang mylangCH">學校</div>
+							<div class="mylang mylangEN">School</div>
+							<div class="mylang mylangJP">学校</div>
+						</div>
+					</td>
+					<td class="td-school" width="55%">
+						<div class="academy-label">
+							<div class="mylang mylangCH">成就</div>
+							<div class="mylang mylangEN">Achievement</div>
+							<div class="mylang mylangJP">実績</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-school-content">
+					<td>
+						<div>
+							<div>2015/09/01<br> ~<br> 2017/06/30</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div class="mylang mylangCH">國立中央大學</div>
+							<div class="mylang mylangEN">National Central University</div>
+							<div class="mylang mylangJP">National Central University</div>
+						</div>
+					</td>
+					<td style="text-align:left;">
+						<div>
+							<div class="mylang mylangCH"><font style="color:#f68600;">◆ 資訊工程所碩士</font><br>◆ The 10th International Conference on Ubi-media Computing and Workshops</div>
+							<div class="mylang mylangEN"><font style="color:#f68600;">◆ Master’s degree of Computer Science 
+and Information Engineering</font><br>◆ The 10th International Conference on Ubi-media Computing and Workshops</div>
+							<div class="mylang mylangJP"><font style="color:#f68600;">◆ 情報工学の修士</font><br>◆ The 10th International Conference on Ubi-media Computing and Workshops</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-school-content">
+					<td>
+						<div>
+							<div>2011/09/01<br> ~<br> 2015/01/01</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div class="mylang mylangCH">真理大學</div>
+							<div class="mylang mylangEN">Aletheia University</div>
+							<div class="mylang mylangJP">Aletheia University</div>
+						</div>
+					</td>
+					<td style="text-align:left;">
+						<div>
+							<div class="mylang mylangCH"><font style="color:#f68600;">◆ 資訊工程系學士</font><br>
+							◆ 每學期班排第一 (書卷獎)<br>
+◆ 行動終端應用軟體創作競賽 佳作<br>
+◆ 國內學術論文發表<br>
+◆ IET Present Around the World Competition 佳作<br>
+◆ 擔任系學會幹部<br>
+◆ 校內各項英語競賽 1~4 名<br>
+</div>
+							<div class="mylang mylangEN"><font style="color:#f68600;">◆ Bachelor’s degree of Computer 
+Science and Information Engineering</font><br>
+◆ Obtained 1st place in class all semesters<br>
+◆ International Schools Software Competition: Mobile device - Honorable Mention<br>
+◆ IET Present Around the World Competition - Honorable Mention<br>
+◆ Member of Department’s Student Association<br>
+◆ English Related Competitions 1
+st ~4th places<br></div>
+							<div class="mylang mylangJP"><font style="color:#f68600;">◆ 情報工学学部の学士号</font><br>
+							◆ 毎学期クラスで1位（書籍賞）<br>
+◆ モバイル端末アプリ開発コンテスト 優秀賞<br>
+◆ 国内学術論文発表<br>
+◆ IET Present Around the World Competition 優秀賞<br>
+◆ 学科学会の幹部を務める<br>
+◆ 学内各種英語競技大会で1〜4位を獲得<br></div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-school-content">
+					<td>
+						<div>
+							<div>2006/01/01 <br>~ <br>2010/12/31</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div>The Settlers High School <br><font style="color:grey">(South Afirca)</font></div>
+						</div>
+					</td>
+					<td style="text-align:left;">
+						<div>
+							<div class="mylang mylangCH">◆ 畢業學年排名前 15<br>
+◆ 創立動漫社且擔任社長、擔任羽球隊長、圖書館會長以及同時參加
+網球社、管樂團、長笛團</div>
+							<div class="mylang mylangEN">◆ Graduated as Top 15 of the grade.<br>
+◆ Founder as well as Chairperson of Anime Society, Badminton Captain, Library 
+Prefect, member of Tennis Team, Orchestra and Flute Ensemble</div>
+							<div class="mylang mylangJP">◆ 卒業時、学年ランキングトップ15位内<br>
+◆ アニメぶの創設と代表を務め、また、バドミントン部のキャプテン、図書館の会長としても活動しました。さらに、テニスサークル、吹奏楽団、フルートアンサンブルにも参加しました。</div>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-school-content">
+					<td>
+						<div>
+							<div>2005/09/01<br> ~ <br>2006/12/31</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div>Welgemoed Primary <br><font style="color:grey">(South Afirca)</font></div>
+						</div>
+					</td>
+					<td style="text-align:left;">
+					</td>
+				</tr>
+				<tr class="tr-school-content">
+					<td>
+						<div>
+							<div>1998/09/01<br> ~ <br>2004/06/30</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div class="mylang mylangCH">新莊國小</div>
+							<div class="mylang mylangEN">Xin-Zhuang Elementary School </div>
+							<div class="mylang mylangJP">新莊國小</div>
+						</div>
+					</td>
+					<td style="text-align:left;">
+					<div>
+							<div class="mylang mylangCH">◆ 縣長獎畢業</div>
+							<div class="mylang mylangEN">◆ Graduated with County Award
+</div>
+							<div class="mylang mylangJP">◆ 県知事賞 卒業</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+
+			  </div>
+			</div>
+			<div class="tab">
+			  <input type="radio" name="css-tabs" id="tab-3" class="tab-switch">
+			  <label for="tab-3" class="tab-label">
+				<div class="mylang mylangCH">自傳</div>
+				<div class="mylang mylangEN">Autobiography</div>
+				<div class="mylang mylangJP">自己紹介</div>
+				</label>
+			  <div class="tab-content self-intro">
+			  <div class="mylang mylangCH">
+					我的名字叫王海慧，興趣是動漫、遊戲與繪畫，因此非常喜歡日本的文化，對日本有著滿滿的憧憬。<br>
+原本預計將在2020年4月時首次與母親一同來日本觀光，不料遇上Covid爆發，因此取消行程。<br>
+經過漫長的等待，三年後，也就是今年2023年1月終於如願來日本遊玩。<br><br>
+來日本觀光後，母親與我都覺得日本是個居住環境很好的國家，經過深思熟慮後，決定辭掉台灣的工作來日本讀書並找工作。<br><br>
+
+我目前正在東京ギャラクシー日本語學校就讀3個月的課程，預計6月16日結束。<br>雖然我的日文程度應該還達不到可以溝通的程度，但是我的英文程度是沒問題的。<br>因此想先看看是否有不太需要日文溝通的工作。
+<br>當然，我的日文學習會持續進行的，希望可以早日使用日文在職場上溝通。
+
+				</div>
+				<div class="mylang mylangEN">
+					My name is Umi Wang, and I have a passion for anime, games, and drawing. As a result, I have a deep admiration for Japanese culture.<br> I had originally planned to visit Japan for the first time with my mother in April 2020, but our trip was unfortunately canceled due to the outbreak of Covid. <br>After a long wait, three years later, in January 2023, I finally had the opportunity to fulfill my wish and visit Japan.<br><br>
+
+During our trip to Japan, both my mother and I found it to be a country with a great living environment. <br>After careful consideration, we made the decision to leave our jobs in Taiwan and come to Japan to study and find work.<br><br>
+
+Currently, I am enrolled in a three-month course at Tokyo Galaxy Japanese Language School, which is scheduled to end on June 16th. <br>Although my Japanese proficiency may not be sufficient for effective communication, I have no issues with English proficiency. <br>So I am hoping to find job opportunities that may not require extensive Japanese language skills.<br> Of course, I will continue my Japanese language studies with the goal of being able to communicate in Japanese in the workplace as soon as possible.
+				</div>
+				<div class="mylang mylangJP">
+					私の名前は王海慧 (オウ・ミュウエ) です。趣味はアニメ、ゲーム、絵画ですので、日本の文化が大好きで、日本に対して憧れを抱いています。<br>
+元々、2020年4月に初めて母親と一緒に日本を観光する予定でしたが、COVID-19の流行のために旅行をキャンセルしました。<br>
+長い待ち時間の後、3年後の2023年1月にやっと日本を訪れることができました。<br><br>
+日本を訪れた後、母親と私は日本がとても良い生活環境を提供している国だと感じ、考え抜いた結果、台湾の仕事を辞めて日本で勉強し、仕事を見つけることを決めました。<br><br>
+
+現在、私は東京ギャラクシー日本語学校で3ヶ月のコースを受講しており、6月16日に終了する予定です。<br>
+私の日本語のレベルはまだコミュニケーションには十分に達していないと思いますが、英語は問題ありません。<br>
+そのため、日本語をあまり必要としない仕事があるか先に探してみたいと思っています。<br>
+もちろん、日本語の学習は継続して行い、早く職場で日本語を使えるようになりたいと思っています。<br>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  
+		</div>
+            
         </section>
         
-        <!-- Biography Section -->
-        <section class="biography">
-            <h2>Biography</h2>
-            <!-- Add your biography content here -->
-        </section>
     </main>
     
-    <footer>
-        <!-- Add your footer content here -->
+    <footer class="footer">
+        
+		
     </footer>
     
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
