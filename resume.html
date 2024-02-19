@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 
-<!-- In case if someone actually reads the code...
-Hi, This resume is done very roughly on notepad++, and not finalized LOL
-Please don't judge my ablity from this code, Thank you so much :)
+<!-- Just an extra presentation for my resume.
  -->
 
 <html lang="en">
@@ -33,6 +31,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			width: 120px;
 			height: 120px;
 			background-color: white;
+			border: 3px solid #ffdcd0;
 			border-radius: 50%;
 			position: relative;
 			top: -60px;
@@ -55,7 +54,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			top: -140px;
 			position: relative;
 			left: 180px;
-			color: #6a5656;
+			color: #006096; /*#6a5656;*/
 			width: max-content;
 		}
 		
@@ -66,7 +65,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			top: -130px;
 			position: relative;
 			left: 180px;
-			color: #5d283a;
+			color: #a7cced; /*#5d283a;*/
 			width: max-content;
 		}
 		
@@ -75,7 +74,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			font-weight: 900;
 			top: -100px;
 			position: relative;
-			color: #2c3e50;;
+			color: #396690; /*#2c3e50;*/ 
 			width: max-content;
 		}
 		
@@ -87,7 +86,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		.skills-label
 		{
 			color: white;
-			background: #6a5656;
+			background: #63adf2; /*#6a5656;*/
 			padding: 10px;
 			border-radius: 7px;
 			width: auto;
@@ -149,7 +148,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		{
 			font-size: large;
 			color: white;
-			background-color: #f1bfc0;
+			background-color: #a7cced;  /*#f1bfc0; */
 		}
 		
 		.tr-school-content
@@ -159,7 +158,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		
 		.tr-school-content:hover
 		{
-			background-color:#fff9f0;
+			background-color:#f0f8ff; /*#fff9f0; */
 		}
 		
 		.td-school
@@ -173,6 +172,37 @@ Please don't judge my ablity from this code, Thank you so much :)
 		{
 			padding: 18px;
 			font-weight:600;
+		}
+		
+		.tb-intro td
+		{
+			padding: 10px;
+			text-align:left;
+			font-weight:600;
+		}
+		
+		.tr-intro
+		{
+			font-size: large;
+			color: white;
+			background-color: #a7cced;  
+		}
+		
+		.tr-intro-content
+		{
+			/* border-bottom: 1px solid #e9e9e9; */
+		}
+		
+		.tr-intro-content:hover
+		{
+			background-color:#f0f8ff; 
+		}
+		
+		.td-intro
+		{
+			padding:10px;
+			text-align: left;
+			font-weight: bold;
 		}
 		
         
@@ -208,9 +238,9 @@ Please don't judge my ablity from this code, Thank you so much :)
 		  line-height: 2.75em;
 		  height: 3em;
 		  padding: 0 1.618em;
-		  background: #6a5656;
-		  border-right: 0.125rem solid #d09c9c;
-		  color: #fff;
+		  background: #fff5f3;
+		  color: #f6a886; 
+		  border-right: 0.125rem solid #ffdcd0;
 		  top: 0;
 		  transition: all 0.25s;
 		  
@@ -228,15 +258,16 @@ Please don't judge my ablity from this code, Thank you so much :)
 		  left: 0;
 		  padding: 1.618rem;
 		  background: #fff;
-		  color: #2c3e50;
+		  color: #396690;
 		  opacity: 0;
 		  transition: all 0.35s;
 		  width: 100%;
 		  font-weight:larger;
 		}
 		.tab-switch:checked + .tab-label {
-		  background: #fff9f0;
-		  color: #2c3e50;
+		  background: #f6a986;
+		  border-right: 0.125rem solid #d09c9c;
+		  color: #fff;
 		  border-bottom: 0;
 		  border-right: 0.125rem solid #fff;
 		  transition: all 0.35s;
@@ -273,7 +304,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		}
 		.timeline ul li span{
 			display:inline-block;
-			background-color:#602d42;
+			background-color:#63adf2; 
 			color:white;
 			border-radius:25px;
 			padding:3px 12px;
@@ -281,8 +312,13 @@ Please don't judge my ablity from this code, Thank you so much :)
 			text-align:center;
 			font-weight: bold;
 		}
+		.timeline ul li span.timetag{
+			color: #f6a986;
+			background: none;
+			text-decoration: underline;
+		}
 		.timeline ul li .content h3{
-			color: #602d42;
+			color: #006096;
 			font-size: x-large;
 			padding-top: 25px;
 			font-weight: bolder;
@@ -294,6 +330,12 @@ Please don't judge my ablity from this code, Thank you so much :)
 			font-weight: bolder;
 			font-style: italic;
 		}
+		
+		.timeline ul li .content .jobtype{
+			font-size: smaller;
+			color: #868686;
+		}
+		
 		.timeline ul li .content p{
 			font-weight:600;
 		}
@@ -309,12 +351,14 @@ Please don't judge my ablity from this code, Thank you so much :)
 			transition:.5s;
 		}
 		.timeline ul li:hover{
-			background-color:#fff9f0;
+			background-color:#f0f8ff; /*#f9fcff; */
 		}
 		.timeline ul li:hover:before{
-		  background-color:#f68800;
-			box-shadow:0px 0px 10px 2px #f68800;
+		  background-color:#63adf2;
+			box-shadow:0px 0px 10px 2px #e9f6ff;
 		}
+		
+		
 		
 		
 		.language-btn
@@ -358,7 +402,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 				top: auto;
 				position: relative;
 				margin: 10px auto;
-				color: #6a5656;
+				color: #006096;
 				width: max-content;
 				left:auto;
 			}
@@ -370,7 +414,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 				top: auto;
 				position: relative;
 				left: auto;
-				color: #5d283a;
+				color: #a7cced;
 				width: max-content;
 				margin: 10px auto;
 			}
@@ -384,7 +428,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			{
 				display: block;
 				font-weight: 900;
-				color: #5d283a;
+				color: #396690;
 				margin: 10px;
 			}
 			
@@ -427,7 +471,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		
     </script>
 	
-    <title>Resume</title>
+    <title>UmiWang</title>
 </head>
 <body onload="showContent('EN')">
     <header>
@@ -447,7 +491,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 			<button class="btn btn-info language-btn" onclick="showContent('EN')">English</button>
             <button class="btn btn-info language-btn" onclick="showContent('CH')">中文</button>
         </div>
-		<div class="pdf-download">
+		<div class="pdf-download" style="display: none;">
 			<div class="mylang mylangCH">
 				<button class="btn btn-secondary language-btn btnpdf" onclick="pdfDownload('CH')">
 				<span class="glyphicon glyphicon-save-file"></span> 下載履歷(CH)
@@ -467,7 +511,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 		
 		<div class="profile-name">
             <div class="mylang mylangCH">王海慧</div>
-			<div class="mylang mylangEN">Hai Hui Wang</div>
+			<div class="mylang mylangEN">Umi Wang</div>
 			<div class="mylang mylangJP">王海慧</div>
 		</div>
 		<div class="profile-detail">
@@ -488,9 +532,7 @@ Please don't judge my ablity from this code, Thank you so much :)
 				<div class="mylang mylangJP">電話番号</div>
 			</td>
 			<td>
-				<div>　(+81) 080 4114 2382 (~ 2023/06/21)</div>
-				<div style="color:grey;">　(+886) 0977 039 163 (2023/06/23 ~)</div>
-				
+				<div>　(+81) 090 9139 9966</div>
 			</td>
 			</tr>
 			</table>
@@ -523,53 +565,66 @@ Please don't judge my ablity from this code, Thank you so much :)
 			</td>
 			<td>
 				<div class="mylang mylangCH">
-					<div> ◆ 中文 (母語)</div>
-					<div> ◆ 英文 Toeic: 750 (英語系國家生活6年)</div>
-					<div> ◆ 日文 (在日本就讀日本語學校中)</div>
+					<div> ◆ 中文 — 母語</div>
+					<div> ◆ 英文 — Toeic: 750 (July 2011), 英語系國家生活6年</div>
+					<div> ◆ 日文 — JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				<div class="mylang mylangEN">
-					<div> ◆ Chinese (Native)</div>
-					<div> ◆ English Toeic: 750 (Lived in English-speaking country for 6 years)</div>
-					<div> ◆ Japanese (Currently attending a Japanese language school in Japan)</div>
+					<div> ◆ Chinese - Native</div>
+					<div> ◆ English - Toeic: 750 (July 2011), Lived in English-speaking country for 6 years</div>
+					<div> ◆ Japanese - JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				<div class="mylang mylangJP">
-					<div> ◆ 中国語 (母語)</div>
-					<div> ◆ 英語 Toeic: 750 (英語國家での生活経験6年)</div>
-					<div> ◆ 日本語 (日本の日本語学校に在籍中)</div>
+					<div> ◆ 中国語 — 母語</div>
+					<div> ◆ 英語 — Toeic: 750 (英語圏で6年間お住まいの経験があります)</div>
+					<div> ◆ 日本語 — JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				
 			</td>
 			</tr>
 			<tr>
-			<td>
-				<div class="skills-label">
-					<div class="mylang mylangCH">程式設計 & 資料庫</div>
-					<div class="mylang mylangEN">Programming & Database</div>
-					<div class="mylang mylangJP">プログラム設計 & データベース</div>
-				</div>
-			</td>
-			<td>
-				<div> ◆ ASP.NET ◆ C# ◆ MS SQL ◆ Java ◆ Python ◆ Android </div>
-			</td>
+				<td>
+					<div class="skills-label">
+						<div class="mylang mylangCH">後端程式設計</div>
+						<div class="mylang mylangEN">Backend Programming</div>
+						<div class="mylang mylangJP">バックエンドプログラミング</div>
+					</div>
+				</td>
+				<td>
+					<div> ◆ ASP.NET ◆ C# ◆ Java ◆ Python ◆ Android </div>
+				</td>
 			</tr>
+			<tr>
+				<td>
+					<div class="skills-label">
+						<div class="mylang mylangCH">前端網頁設計</div>
+						<div class="mylang mylangEN">Frontend Development</div>
+						<div class="mylang mylangJP">フロントエンド開発</div>
+					</div>
+				</td>
+				<td>
+					<div> ◆ HTML ◆ JavaScript ◆ CSS ◆ Bootstrap ◆ jQuery </div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div class="skills-label">
+						<div class="mylang mylangCH">資料庫</div>
+						<div class="mylang mylangEN">Database</div>
+						<div class="mylang mylangJP">データベース</div>
+					</div>
+				</td>
+				<td>
+					<div> ◆ MS SQL ◆ Oracle MySQL</div>
+				</td>
+			</tr>
+			
 			<tr>
 			<td>
 				<div class="skills-label">
-					<div class="mylang mylangCH">網頁 UI/UX</div>
-					<div class="mylang mylangEN">Web UI/UX</div>
-					<div class="mylang mylangJP">ウェブUI/UX</div>
-				</div>
-			</td>
-			<td>
-				<div> ◆ HTML ◆ JavaScript ◆ CSS ◆ Bootstrap ◆ jQuery </div>
-			</td>
-			</tr>
-			<tr>
-			<td>
-				<div class="skills-label">
-					<div class="mylang mylangCH">應用軟體</div>
-					<div class="mylang mylangEN">Application Software</div>
-					<div class="mylang mylangJP">ソフトウェア</div>
+					<div class="mylang mylangCH">其他</div>
+					<div class="mylang mylangEN">Others</div>
+					<div class="mylang mylangJP">その他</div>
 				</div>
 			</td>
 			<td>
@@ -607,19 +662,19 @@ Please don't judge my ablity from this code, Thank you so much :)
 			<tr>
 			<td class="td-skills">
 				<div class="mylang mylangCH">
-					<div> ◆ 中文 (母語)</div>
-					<div> ◆ 英文 Toeic: 750 (英語系國家生活6年)</div>
-					<div> ◆ 日文 (在日本就讀日本語學校中)</div>
+					<div> ◆ 中文 — 母語</div>
+					<div> ◆ 英文 — Toeic: 750 (July 2011), 英語系國家生活6年</div>
+					<div> ◆ 日文 — JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				<div class="mylang mylangEN">
-					<div> ◆ Chinese (Native)</div>
-					<div> ◆ English Toeic: 750 (Lived in English-speaking country for 6 years)</div>
-					<div> ◆ Japanese (Currently attending a Japanese language school in Japan)</div>
+					<div> ◆ Chinese - Native</div>
+					<div> ◆ English - Toeic: 750 (July 2011), Lived in English-speaking country for 6 years</div>
+					<div> ◆ Japanese - JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				<div class="mylang mylangJP">
-					<div> ◆ 中国語 (母語)</div>
-					<div> ◆ 英語 Toeic: 750 (英語國家での生活経験6年)</div>
-					<div> ◆ 日本語 (日本の日本語学校に在籍中)</div>
+					<div> ◆ 中国語 — 母語</div>
+					<div> ◆ 英語 — Toeic: 750 (英語圏で6年間お住まいの経験があります)</div>
+					<div> ◆ 日本語 — JLPT N2 (July 2023), JLPT N3 (July 2023)</div>
 				</div>
 				
 			</td>
@@ -627,23 +682,23 @@ Please don't judge my ablity from this code, Thank you so much :)
 			<tr>
 			<td>
 				<div class="skills-label">
-					<div class="mylang mylangCH">程式設計 & 資料庫</div>
-					<div class="mylang mylangEN">Programming & Database</div>
-					<div class="mylang mylangJP">プログラム設計 & データベース</div>
+					<div class="mylang mylangCH">後端程式設計</div>
+					<div class="mylang mylangEN">Backend Programming</div>
+					<div class="mylang mylangJP">バックエンドプログラミング</div>
 				</div>
 			</td>
 			</tr>
 			<tr>
 			<td class="td-skills">
-				<div> ◆ ASP.NET ◆ C# ◆ MS SQL ◆ Java ◆ Python ◆ Android</div>
+				<div> ◆ ASP.NET ◆ C# ◆ Java ◆ Python ◆ Android </div>
 			</td>
 			</tr>
 			<tr>
 			<td>
 				<div class="skills-label">
-					<div class="mylang mylangCH">網頁 UI/UX</div>
-					<div class="mylang mylangEN">Web UI/UX</div>
-					<div class="mylang mylangJP">ウェブUI/UX</div>
+					<div class="mylang mylangCH">前端網頁設計</div>
+					<div class="mylang mylangEN">Frontend Development</div>
+					<div class="mylang mylangJP">フロントエンド開発</div>
 				</div>
 			</td>
 			</tr>
@@ -653,11 +708,25 @@ Please don't judge my ablity from this code, Thank you so much :)
 			</td>
 			</tr>
 			<tr>
+			<td>
+				<div class="skills-label">
+					<div class="mylang mylangCH">資料庫</div>
+					<div class="mylang mylangEN">Database</div>
+					<div class="mylang mylangJP">データベース</div>
+				</div>
+			</td>
+			</tr>
+			<tr>
+			<td class="td-skills">
+				<div> ◆ MS SQL ◆ Oracle MySQL</div>
+			</td>
+			</tr>
+			<tr>
 			<td >
 				<div class="skills-label">
-					<div class="mylang mylangCH">應用軟體</div>
-					<div class="mylang mylangEN">Application Software</div>
-					<div class="mylang mylangJP">ソフトウェア</div>
+					<div class="mylang mylangCH">其他</div>
+					<div class="mylang mylangEN">Others</div>
+					<div class="mylang mylangJP">その他</div>
 				</div>
 			</td>
 			</tr>
@@ -684,61 +753,125 @@ Please don't judge my ablity from this code, Thank you so much :)
 			  <div class="tab-content">
 				<div class="timeline">
 					<ul>
-						<li>
-							<span>2017/09 ~ 2023/03</span>
+					<li>
+						<span>2023/11 ~ Now</span>
 							<div class="content">
 								<div class="mylang mylangCH">
-									<h3>緯創資通</h3>
-									<h2>技術主任 (2021~)</h2>
-									<h2>系統開發工程師</h2>
+									<h3>博彥科技有限公司(日本) 
+									<font class="jobtype"> (委託社員)</font></h3>
+									<h2>Software Engineer</h2>
 									<br>
 									<p>
-										此職位主要負責同處其他部門的數位轉型相關需求。
-										</p>
-										<p>主要專案為 ESG Database ，此專案目的為協助全球各廠區 ESG 相關數據整合而開發。內容包含資料上傳、
-										審核、KPI公式計算、報表展示以及定期發送等功能。</p>
-										<p>次要專案為 CoPQ 1.0，目的為進行公司不良品質成本資料的蒐集與串接，並將數據透過報表呈現。<p>
-										<p>工作內容包含： ◆ 需求訪談 ◆ 需求評估 ◆ 系統設計 ◆ 資料庫設計 ◆ 資料庫建置 ◆ 系統開發
-										◆ 系統測試 ◆ 資料串接 ◆ UI/UX設計 ◆ 協助主管報告製作等...
+										依照得到的系統設計書, 在Excel上進行細部設計以及測試.
 									</p>
 								</div>
 								<div class="mylang mylangEN">
-									<h3>Wistron</h3>
-									<h2>Technical Supervisor (2021~)</h2>
-									<h2>System Develop Engineer</h2>
+									<h3>Beyondsoft Japan 
+									<font class="jobtype"> (Independent Contractor)</font></h3>
+									<h2>Software Engineer</h2>
 									<br>
 									<p>
-										This position mainly covers the digital transformation of other Department requirements under this Division.
-										</p>
-										<p>Major project is ESG Database , which is a system that helps with uploading, reviewing, KPI algorithm calculations, 
-reports and notices on the ESG related data of all Sites.</p>
-										<p>Other projects such as CoPQ 1.0, where detailed report of Cost of Poor Quality can be analyzed.<p>
-										<p>Work focus: ◆ Demand Interview & Analysis ◆ System Design & Develop ◆ Database Design & Build ◆ Testing ◆ Data Concatenation ◆ UI/UX Design
-										◆ Support Manager on report writing
+										Based on the received system design document, detailed design and testing are conducted on Excel.
 									</p>
 								</div>
 								<div class="mylang mylangJP">
-									<h3>ウィストロン</h3>
-									<h2>テクニカルリーダー (2021~)</h2>
-									<h2>システム開発エンジニア</h2>
+									<h3>株式会社 Beyondsoft Japan 
+									<font class="jobtype"> (委託社員)</font></h3>
+									<h2>ソフトウェアエンジニア</h2>
 									<br>
-									<p>
-										このポジションでは、他の部門とのデジタルトランスフォーメーションに関連する要件を調整することが主な役割です。
-										</p>
-										<p>主要なプロジェクトはESGデータベースであり、世界各工場のESG関連データの統合と開発を支援することを目的としています。データのアップロード、審査、KPIの計算、レポートの表示、定期的な送信などの機能が含まれています。</p>
-										<p>副次的なプロジェクトはCoPQ 1.0であり、企業の品質コストデータの収集と統合を行い、データをレポートで表示することを目的としています。<p>
-										<p>業務内容： ◆ 要件インタビュー ◆ 要件評価 ◆ システム設計 ◆ データベース設計 ◆ データベースの構築 ◆ システム開発
-										◆ システムテスト ◆ データの統合 ◆ UI/UX設計 ◆ 上司の報告作成の支援などが含まれます...
+									<p>受け取ったシステム設計書に基づき、Excel上で詳細な設計とテストを行います。
 									</p>
 								</div>
 							</div>
 						</li>
 						<li>
-							<span>2013/07 ~ 2013/08</span>
+							<span>2017/09 ~ 2023/03</span> <span class="timetag"> 5yr. 6mths</span>
 							<div class="content">
 								<div class="mylang mylangCH">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(打工)</font> 日昭電子</h3>
+									<h3>緯創資通 
+									<font class="jobtype"> (正社員)</font></h3>
+									<h2>技術主任 (2021~2023)</h2>
+									<h2>全端系統工程師 (2017~2020)</h2>
+									<br>
+									<p>
+										此職位主要負責同處其他部門的數位轉型相關需求。
+										</p>
+										<br>
+										<p>主要專案為 ESG Database ，此專案目的為協助全球各廠區 ESG 相關數據整合而開發。內容包含資料上傳、
+										審核、KPI公式計算、報表展示以及定期發送等功能。</p>
+										<br>
+										<p>次要專案為 CoPQ 1.0，目的為進行公司不良品質成本資料的蒐集與串接，並將數據透過報表呈現。<p>
+										<br>
+										<p>工作內容包含： 
+										<br>◆ 需求訪談 
+										<br>◆ 需求評估 
+										<br>◆ 系統設計 
+										<br>◆ 資料庫設計 
+										<br>◆ 資料庫建置 
+										<br>◆ 系統開發
+										<br>◆ 系統測試 
+										<br>◆ 資料串接
+										<br>◆ UI/UX設計
+									</p>
+								</div>
+								<div class="mylang mylangEN">
+									<h3>Wistron 
+									<font class="jobtype"> (Full-time Employee)</font></h3>
+									<h2>Technical Supervisor (2021~2023)</h2>
+									<h2>Full-Stack System Engineer (2017~2020)</h2>
+									<br>
+									<p>
+										This position mainly covers the digital transformation of other Department requirements under this Division.
+										</p>
+										<br>
+										<p>Major project is ESG Database , which is a system that helps with uploading, reviewing, KPI algorithm calculations, 
+reports and notices on the ESG related data of all Sites.</p>
+										<br>
+										<p>Other projects such as CoPQ 1.0, where detailed report of Cost of Poor Quality can be analyzed.<p>
+										<br>
+										<p>Work focus: 
+										<br>◆ Demand Interview & Analysis 
+										<br>◆ System Design & Develop 
+										<br>◆ Database Design & Build 
+										<br>◆ Testing 
+										<br>◆ Data Concatenation 
+										<br>◆ UI/UX Design
+									</p>
+								</div>
+								<div class="mylang mylangJP">
+									<h3> ウィストロン
+									<font class="jobtype"> (正社員)</font></h3>
+									<h2>テクニカルリーダー (2021~2023)</h2>
+									<h2>フルスタック システムエンジニア (2017~2020)</h2>
+									<br>
+									<p>
+										このポジションでは、他の部門とのデジタルトランスフォーメーションに関連する要件を調整することが主な役割です。
+										</p>
+										<br>
+										<p>主要なプロジェクトはESGデータベースであり、世界各工場のESG関連データの統合と開発を支援することを目的としています。データのアップロード、審査、KPIの計算、レポートの表示、定期的な送信などの機能が含まれています。</p>
+										<br>
+										<p>副次的なプロジェクトはCoPQ 1.0であり、企業の品質コストデータの収集と統合を行い、データをレポートで表示することを目的としています。<p>
+										<br>
+										<p>業務内容： 
+										<br>◆ 要件インタビュー 
+										<br>◆ 要件評価 
+										<br>◆ システム設計 
+										<br>◆ データベース設計 
+										<br>◆ データベースの構築 
+										<br>◆ システム開発
+										<br>◆ システムテスト 
+										<br>◆ データの統合 
+										<br>◆ UI/UX設計
+									</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span>2013/07 ~ 2013/08</span> <span class="timetag"> 1mth</span>
+							<div class="content">
+								<div class="mylang mylangCH">
+									<h3> 日昭電子 
+	<font class="jobtype"> (打工)</font></h3>
 									<h2>作業員</h2>
 									<br>
 									<p>
@@ -746,8 +879,8 @@ reports and notices on the ESG related data of all Sites.</p>
 										</p>
 								</div>
 								<div class="mylang mylangEN">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(Part-time)</font> Nissho Electronics</h3>
+									<h3> Nissho Electronics 
+	<font class="jobtype"> (Part-time)</font></h3>
 									<h2>Operator</h2>
 									<br>
 									<p>
@@ -755,8 +888,8 @@ reports and notices on the ESG related data of all Sites.</p>
 										</p>
 								</div>
 								<div class="mylang mylangJP">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(アルバイト)</font> 日昭電子</h3>
+									<h3> 日昭電子 
+	<font class="jobtype"> (アルバイト)</font></h3>
 									<h2>オペレーター</h2>
 									<br>
 									<p>
@@ -766,11 +899,11 @@ reports and notices on the ESG related data of all Sites.</p>
 							</div>
 						</li>
 						<li>
-							<span>2011/02 ~ 2011/08</span>
+							<span>2011/02 ~ 2011/08</span> <span class="timetag"> 6mths</span>
 							<div class="content">
 								<div class="mylang mylangCH">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(打工)</font> 何嘉仁國際文教團隊</h3>
+									<h3> 何嘉仁國際文教團隊 
+	<font class="jobtype"> (打工)</font></h3>
 									<h2>行政</h2>
 									<br>
 									<p>
@@ -778,9 +911,9 @@ reports and notices on the ESG related data of all Sites.</p>
 										</p>
 								</div>
 								<div class="mylang mylangEN">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(Part-time)</font> HESS International 
-Education Group</h3>
+									<h3> HESS International 
+Education Group 
+<font class="jobtype"> (Part-time)</font></h3>
 									<h2>Administrative</h2>
 									<br>
 									<p>
@@ -788,8 +921,8 @@ Education Group</h3>
 										</p>
 								</div>
 								<div class="mylang mylangJP">
-									<h3><font style="font-size: smaller;
-    color: #868686;">(アルバイト)</font> ヘス・インターナショナル教育グループ</h3>
+									<h3> ヘス・インターナショナル教育グループ 
+									<font class="jobtype"> (アルバイト)</font></h3>
 									<h2>行政職</h2>
 									<br>
 									<p>
@@ -812,14 +945,14 @@ Education Group</h3>
 			  <div class="tab-content" >
 			<table width="100%" class="tb-school">
 				<tr class="tr-school">
-					<td class="td-school" width="15%">
+					<td class="td-school" width="20%" colspan="2">
 						<div class="academy-label">
 							<div class="mylang mylangCH">日期</div>
 							<div class="mylang mylangEN">Date</div>
 							<div class="mylang mylangJP">日付</div>
 						</div>
 					</td>
-					<td class="td-school" width="30%">
+					<td class="td-school" width="25%">
 						<div class="academy-label">
 							<div class="mylang mylangCH">學校</div>
 							<div class="mylang mylangEN">School</div>
@@ -842,6 +975,11 @@ Education Group</h3>
 					</td>
 					<td>
 						<div>
+							<div>2 yrs.</div>
+						</div>
+					</td>
+					<td>
+						<div>
 							<div class="mylang mylangCH">國立中央大學</div>
 							<div class="mylang mylangEN">National Central University</div>
 							<div class="mylang mylangJP">National Central University</div>
@@ -860,6 +998,11 @@ and Information Engineering</font><br>◆ The 10th International Conference on U
 					<td>
 						<div>
 							<div>2011/09/01<br> ~<br> 2015/01/01</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div>4 yrs.</div>
 						</div>
 					</td>
 					<td>
@@ -905,6 +1048,11 @@ st ~4th places<br></div>
 					</td>
 					<td>
 						<div>
+							<div>5 yrs.</div>
+						</div>
+					</td>
+					<td>
+						<div>
 							<div>The Settlers High School <br><font style="color:grey">(South Africa)</font></div>
 						</div>
 					</td>
@@ -912,7 +1060,7 @@ st ~4th places<br></div>
 						<div>
 							<div class="mylang mylangCH">◆ 畢業學年排名前 15<br>
 ◆ 創立動漫社且擔任社長、擔任羽球隊長、圖書館會長以及同時參加
-網球社、管樂團、長笛團</div>
+網球社、管樂團、長笛社</div>
 							<div class="mylang mylangEN">◆ Graduated as Top 15 of the grade.<br>
 ◆ Founder as well as Chairperson of Anime Society, Badminton Captain, Library 
 Prefect, member of Tennis Team, Orchestra and Flute Ensemble</div>
@@ -929,6 +1077,11 @@ Prefect, member of Tennis Team, Orchestra and Flute Ensemble</div>
 					</td>
 					<td>
 						<div>
+							<div>1 yrs.</div>
+						</div>
+					</td>
+					<td>
+						<div>
 							<div>Welgemoed Primary <br><font style="color:grey">(South Afirca)</font></div>
 						</div>
 					</td>
@@ -939,6 +1092,11 @@ Prefect, member of Tennis Team, Orchestra and Flute Ensemble</div>
 					<td>
 						<div>
 							<div>1998/09/01<br> ~ <br>2004/06/30</div>
+						</div>
+					</td>
+					<td>
+						<div>
+							<div>6 yrs.</div>
 						</div>
 					</td>
 					<td>
@@ -971,43 +1129,163 @@ Prefect, member of Tennis Team, Orchestra and Flute Ensemble</div>
 				</label>
 			  <div class="tab-content self-intro">
 			  <div class="mylang mylangCH">
-					我的名字叫王海慧，興趣是動漫、遊戲與繪畫，因此非常喜歡日本的文化，對日本有著滿滿的憧憬。<br>
-原本預計將在2020年4月時首次與母親一同來日本觀光，不料遇上Covid爆發，因此取消行程。<br>
-經過漫長的等待，三年後，也就是今年2023年1月終於如願來日本遊玩。<br><br>
+			  <table width="100%" class="tb-intro">
+				<tr class="tr-intro-content">
+					<td>
+						<div>我的名字叫王海慧，來自台灣，興趣是動漫、遊戲與繪畫，因此非常喜歡日本的文化，對日本有著滿滿的憧憬。<br><br>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-intro-content">
+					<td>
+						<div>
+							原本預計將在2020年4月時首次與母親一同來日本觀光，不料遇上Covid爆發，因此取消行程。<br>
+經過漫長的等待，三年後，也就是去年2023年1月終於如願來日本遊玩。<br><br>
 來日本觀光後，母親與我都覺得日本是個居住環境很好的國家，經過深思熟慮後，決定辭掉台灣的工作來日本讀書並找工作。<br><br>
-
-我目前正在東京ギャラクシー日本語學校就讀3個月的課程，預計6月16日結束。<br>雖然我的日文程度應該還達不到可以溝通的程度，但是我的英文程度是沒問題的。<br>因此想先看看是否有不太需要日文溝通的工作。
-<br>當然，我的日文學習會持續進行的，希望可以早日使用日文在職場上溝通。
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-intro-content">
+					<td>
+						<div>
+							◆ 去年經歷：<br>
+							2023年3月 － 從緯創離職<br>
+							2023年4月 － 至東京ギャラクシー日本語學校就讀3個月的課程<br>
+							2023年6月 － 回台灣參加 JLPT 考試<br>
+							2023年7月 － 順利拿到日本博彥科技的 Offer<br>
+							2023年10月 － 獲得JLPT N2, JLPT N3的證照<br>
+							2023年11月 － 日本博彥科技開始工作<br><br>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-intro-content">
+					<td>
+						<div>
+							◆ 想離職的原因：<br>
+							1. 我認為現在做的工作雖然職稱是軟體工程師，但作業內容跟我所認知的軟體工程師並不相同。(沒有設計或是寫程式的部分)<br>
+							2. 因為在緯創有過協助ESG部門進行數位轉型的經驗，我覺得我目前的工作內容未來有極大的可能會被程式取代。<br>
+							3. 非正社員。<br><br>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr-intro-content">
+					<td>
+						<div>
+							◆ 未來規劃：<br>
+							1. 預計今年7月報名JLPT N1的考試。<br>
+							2. 希望可以加入重視團隊精神且有發展空間的公司。<br><br>
+						</div>
+					</td>
+				</tr>
+		</table>
+					<br>
 
 				</div>
 				<div class="mylang mylangEN">
-					My name is Umi Wang, and I have a passion for anime, games, and drawing. As a result, I have a deep admiration for Japanese culture.<br> I had originally planned to visit Japan for the first time with my mother in April 2020, but our trip was unfortunately canceled due to the outbreak of Covid. <br>After a long wait, three years later, in January 2023, I finally had the opportunity to fulfill my wish and visit Japan.<br><br>
+				<table width="100%" class="tb-intro">
+					<tr class="tr-intro-content">
+						<td>
+							<div>My name is Umi Wang, from Taiwan, and I have a passion for anime, games, and drawing. As a result, I have a deep admiration for Japanese culture.<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>Originally, I planned to visit Japan for the first time with my mother on April 2020. Unfortunately, our plans were canceled due to the outbreak of Covid.  After a long wait, three years later, in January last year 2023, I finally had the opportunity to visit Japan.<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>During our trip to Japan, both my mother and I found it to be a country with a great living environment. <br>After careful consideration, we made the decision to leave my job in Taiwan and come to Japan to study and work.<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ In the past year:<br>
+									March 2023 - Resigned from Wistron.<br>
+									April 2023 - Attended a 3-month course at Tokyo Galaxy Japanese Language School at Japan.<br>
+									June 2023 - Returned to Taiwan to take the JLPT exam.<br>
+									July 2023 - Successfully obtained an offer from Beyondsoft Japan.<br>
+									October 2023 - Received JLPT N2 and JLPT N3 certifications.<br>
+									November 2023 - Joined Beyondsoft Japan.<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ Reasons for Resignation:<br>
+							1. Although my job title is software engineer, the tasks I perform are different from what I understand a software engineer typically does (no design or programming involved).<br>
+							2. Due to my experience assisting the ESG department at Wistron with digital transformation, I feel that my current job could soon be replaced by programming in the future.<br>
+							3. Not Full-time Employee.<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ Future Plans:<br>
+							1. Apply for the JLPT N1 exam this July.<br>
+							2. Hoping to join a company that values teamwork and offers growth opportunities.<br><br>
+							</div>
+						</td>
+					</tr>
+				</table>
+					
 
-During our trip to Japan, both my mother and I found it to be a country with a great living environment. <br>After careful consideration, we made the decision to leave my job in Taiwan and come to Japan to study and find work.<br><br>
 
-Currently, I am enrolled in a three-month course at Tokyo Galaxy Japanese Language School, which is scheduled to end on June 16th. <br>Although my Japanese proficiency may not be sufficient for effective communication, I have no issues with English proficiency. (TOEIC score was taken before University) <br>So I am hoping to find job opportunities that may not require extensive Japanese language skills.<br> Of course, I will continue my Japanese language studies with the goal of being able to communicate in Japanese in the workplace as soon as possible.
 				</div>
 				<div class="mylang mylangJP">
-					<div style="
-    display: none;">私の名前は王海慧 (オウ・ミュウエ) です。趣味はアニメ、ゲーム、絵画ですので、日本の文化が大好きで、日本に対して憧れを抱いています。<br>
-元々、2020年4月に初めて母親と一緒に日本を観光する予定でしたが、COVID-19の流行のために旅行をキャンセルしました。<br>
-長い待ち時間の後、3年後の2023年1月にやっと日本を訪れることができました。<br><br>
-日本を訪れた後、母親と私は日本がとても良い生活環境を提供している国だと感じ、考え抜いた結果、台湾の仕事を辞めて日本で勉強し、仕事を見つけることを決めました。<br><br>
-
-現在、私は東京ギャラクシー日本語学校で3ヶ月のコースを受講しており、6月16日に終了する予定です。<br>
-私の日本語のレベルはまだコミュニケーションには十分に達していないと思いますが、英語は問題ありません。<br>
-そのため、日本語をあまり必要としない仕事があるか先に探してみたいと思っています。<br>
-もちろん、日本語の学習は継続して行い、早く職場で日本語を使えるようになりたいと思っています。<br>
-</div>
-私の名前は王海慧 (オウ・ミュウエ) と申します。趣味はアニメ、ゲーム、絵画でございますので、日本の文化に非常に興味を持ち、日本に対して深い憧れを抱いております。<br>
-当初は2020年4月に、母親と共に初めて日本をご訪問予定でございましたが、COVID-19の発生により、旅程を中止せざるを得ませんでした。<br>
-それから3年の歳月を経て、ついに今年の2023年1月に、心の底からの願いが叶い、日本を訪れることができました。<br><br>
-日本を訪れた後、母親ともども、この国が住みやすい環境を提供していることを感じ、慎重に考えた結果、台湾での仕事を辞して、日本での学業と就職を目指すことを決断いたしました。<br><br>
-
-現在は、東京ギャラクシー日本語学校にて、3か月間のコースを受講中でございます。期日は6月16日に終了する予定でございます。<br>
-私の日本語の力は、まだコミュニケーションに十分に達していないものと考えておりますが、英語に関しては問題ございません。<br>
-このため、まずは日本語があまり必要のないお仕事の可能性をご探求いたしたく存じます。<br>
-もちろん、日本語の学習は継続して進め、早く職場で日本語を使用できるようになることを願っております。<br>
+				<table width="100%" class="tb-intro">
+					<tr class="tr-intro-content">
+						<td>
+							<div>私の名前は王海慧(オウ・ミュウエ)と申します、台湾人です。趣味はアニメ、ゲーム、絵を描くことで、そのため日本の文化が大変好きであり、日本に対して憧れがあります。<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>当初、2020年4月に母と初めて日本を観光する予定でしたが、Covidの発生により旅行がキャンセルされました。長い待ち時間の後、3年後の昨年2023年1月に日本への旅行をついに実現いたしました。<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>日本を観光した後、母と私は日本が居住環境の良い国であると感じ、よく考えた結果、台湾の仕事を辞めて日本で勉強をし、仕事を探すことに決めました。<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ 過去1年間：<br>
+									2023年3月 - ウィストロンを退職<br>
+									2023年4月 - 東京ギャラクシー日本語学校で3ヶ月のコースを受講いたしました<br>
+									2023年6月 - 台湾に戻り、JLPT試験を受験いたしました<br>
+									2023年7月 - 株式会社 Beyondsoft Japan から内定を頂きました<br>
+									2023年10月 - JLPT N2、JLPT N3の資格を取得<br>
+									2023年11月 - 株式会社 Beyondsoft Japan に入社<br><br>
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ 退職の理由：<br>
+									1. 現在の仕事はソフトウェアエンジニアという職名ですが、私が認識するソフトウェアエンジニアとは異なる作業内容です（設計やプログラミングの部分がない）。<br>
+									2. ウィストロンでESG部門のデジタル変革を支援した経験があり、私の現在の仕事内容は将来、プログラムで置き換えられる可能性が非常に高いと感じております。<br>
+									3. 非正社員。<br><br>	
+							</div>
+						</td>
+					</tr>
+					<tr class="tr-intro-content">
+						<td>
+							<div>◆ 将来の計画：<br>
+								1. 今年7月にJLPT N1の試験に申し込む予定でございます。<br>
+								2. チームワークを重視し、成長の機会がある企業に入職したいと考えております。<br><br>	
+							</div>
+						</td>
+					</tr>
+				</table>
+					
 				</div>
 			  </div>
 			</div>
