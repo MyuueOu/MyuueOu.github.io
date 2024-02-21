@@ -487,12 +487,14 @@
 		
 		function pdfDownload(contentId) {
 		//debugger;
-			window.open("https://myuueou.github.io/resumepdf/%E5%B1%A5%E6%AD%B4%E6%9B%B8_%E7%8E%8B%E6%B5%B7%E6%85%A7_"+ contentId +".pdf", "_blank");
+			//window.open("https://myuueou.github.io/resumepdf/%E5%B1%A5%E6%AD%B4%E6%9B%B8_%E7%8E%8B%E6%B5%B7%E6%85%A7_"+ contentId +".pdf", "_blank");
+			
+			window.open("https://myuueou.github.io/resumepdf/Resume_UmiWang_"+ contentId +".pdf", "_blank");
         }
 		
     </script>
 	
-    <title>UmiWang</title>
+    <title>Umi Wang</title>
 </head>
 <body onload="showContent('EN')">
     <header>
@@ -512,18 +514,25 @@
 			<button class="btn btn-info language-btn" onclick="showContent('EN')">English</button>
             <button class="btn btn-info language-btn" onclick="showContent('CH')">中文</button>
         </div>
-		<div class="pdf-download" style="display: none;">
-			<div class="mylang mylangCH">
+		<div class="pdf-download">
+			
+			<div>
+				<button class="btn btn-secondary language-btn btnpdf" onclick="pdfDownload('EN')">
+				<span class="glyphicon glyphicon-save-file"></span> Download Resume
+				</button>
+			</div>
+			
+			<div class="mylang mylangCH" style="display: none;">
 				<button class="btn btn-secondary language-btn btnpdf" onclick="pdfDownload('CH')">
 				<span class="glyphicon glyphicon-save-file"></span> 下載履歷(CH)
 				</button>
 			</div>
-			<div class="mylang mylangEN">
+			<div class="mylang mylangEN" style="display: none;">
 				<button class="btn btn-secondary language-btn btnpdf" onclick="pdfDownload('EN')">
 				<span class="glyphicon glyphicon-save-file"></span> Download Resume(EN)
 				</button>
 			</div>
-			<div class="mylang mylangJP">
+			<div class="mylang mylangJP" style="display: none;">
 				<button class="btn btn-secondary language-btn btnpdf" onclick= "pdfDownload('JP')">
 				<span class="glyphicon glyphicon-save-file"></span> 履歴書ダウンロード(JP)
 				</button>
